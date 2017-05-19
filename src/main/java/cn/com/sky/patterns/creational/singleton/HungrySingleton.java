@@ -9,10 +9,16 @@ public class HungrySingleton {
 	private static final HungrySingleton instance = new HungrySingleton();
 
 	private HungrySingleton() {
+		System.out.println("HungrySingleton()");
 	}
 
 	public static HungrySingleton getInstance() {
 		return instance;
 	}
 
+	// 执行print()方法也会初始化
+	public static HungrySingleton print() {
+		System.out.println("print.....");
+		return instance;
+	}
 }

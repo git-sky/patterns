@@ -2,6 +2,7 @@ package cn.com.sky.patterns.creational.singleton;
 
 /**
  * <pre>
+ * 
  * 静态内部类实现单例模式。
  * 
  * 使用JVM本身机制保证了线程安全问题。
@@ -9,11 +10,14 @@ package cn.com.sky.patterns.creational.singleton;
  * 既实现了线程安全，又避免了同步带来的性能影响。
  * 
  * 原因参见： http://www.infoq.com/cn/articles/double-checked-locking-with-delay-initialization/
+ * 
+ * </pre>
  */
 public class InternalSingleton {
 
 	/* 私有构造方法，防止被实例化 */
 	private InternalSingleton() {
+		System.out.println("InternalSingleton()...");
 	}
 
 	/* 此处使用一个内部类来维护单例 */
