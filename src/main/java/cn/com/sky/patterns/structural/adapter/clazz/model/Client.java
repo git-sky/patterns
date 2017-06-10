@@ -34,7 +34,7 @@ package cn.com.sky.patterns.structural.adapter.clazz.model;
  * 类适配器模式（Class Adapter）所涉及的角色:
  *  
  *  目标(Target)角色：客户端需要的接口。
- *  源(Adapee)角色：已有的接类，需要被适配。
+ *  源(Adapee)角色：已有的接口或类，需要被适配。
  *  适配器(Adaper)角色：适配器类是本模式的核心。适配器把源接口转换成目标接口。
  *  
  * 

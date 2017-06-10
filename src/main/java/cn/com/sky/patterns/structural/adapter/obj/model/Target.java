@@ -7,6 +7,6 @@ public interface Target {
 
 	void operation();
 
-	void operation2();
+	void operationNew();
 
 }

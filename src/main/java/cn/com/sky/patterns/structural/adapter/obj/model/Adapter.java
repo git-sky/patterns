@@ -17,8 +17,8 @@ public class Adapter implements Target {
 	}
 
 	@Override
-	public void operation2() {
-		System.out.println("operation2()");
+	public void operationNew() {
+		System.out.println("operationNew()");
 	}
 
 }
