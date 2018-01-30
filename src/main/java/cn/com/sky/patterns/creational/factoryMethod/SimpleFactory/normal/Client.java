@@ -12,6 +12,10 @@ package cn.com.sky.patterns.creational.factoryMethod.SimpleFactory.normal;
  * 2、抽象产品角色：它一般是具体产品继承的父类或者实现的接口。在java中由接口或者抽象类来实现。
  * 
  * 3、具体产品角色：工厂类所创建的对象就是此角色的实例。在java中由一个具体类实现。
+ *
+ *
+ * 普通工厂模式，就是建立一个工厂类，对实现了同一接口的一些类进行实例的创建。
+ * 如果传递的字符串出错，则不能正确创建对象.
  * 
  */
 public class Client {

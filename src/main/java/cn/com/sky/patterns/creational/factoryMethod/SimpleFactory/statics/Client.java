@@ -1,5 +1,8 @@
 package cn.com.sky.patterns.creational.factoryMethod.SimpleFactory.statics;
 
+/**
+ * 静态工厂方法模式，将上面的多个工厂方法模式里的方法置为静态的，不需要实例化工厂类，直接调用即可。
+ */
 public class Client {
 
 	public static void main(String[] args) {

@@ -32,7 +32,7 @@ public class Client {
 		// 创建环境
 		PriceContext price = new PriceContext(strategy);
 		// 计算价格
-		double quote = price.calcPrice(300);
+		double quote = price.quote(300);
 		System.out.println("图书的最终价格为：" + quote);
 	}
 

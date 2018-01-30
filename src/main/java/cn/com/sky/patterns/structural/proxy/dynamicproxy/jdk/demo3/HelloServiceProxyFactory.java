@@ -23,6 +23,7 @@ public class HelloServiceProxyFactory {
 		};
 
 		Class<HelloService> classType = HelloService.class;
+
 		return (HelloService) Proxy.newProxyInstance(classType.getClassLoader(), new Class[] { classType }, handler);
 	}
 
