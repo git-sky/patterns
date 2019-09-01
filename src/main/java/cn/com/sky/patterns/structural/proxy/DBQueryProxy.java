@@ -10,8 +10,9 @@ public class DBQueryProxy implements IDBQuery {
 
     @Override
     public String request() {
-        if (real == null)
+        if (real == null) {
             real = new DBQuery();
+        }
         return real.request();
     }
 

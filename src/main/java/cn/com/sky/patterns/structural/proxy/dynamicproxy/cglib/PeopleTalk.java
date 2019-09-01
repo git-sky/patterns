@@ -5,7 +5,7 @@ package cn.com.sky.patterns.structural.proxy.dynamicproxy.cglib;
  */
 public class PeopleTalk {
 
-	public void talk(String msg) {
-		System.out.println("people talk:" + msg);
-	}
+    public void talk(String msg) {
+        System.out.println("people talk:" + msg);
+    }
 }

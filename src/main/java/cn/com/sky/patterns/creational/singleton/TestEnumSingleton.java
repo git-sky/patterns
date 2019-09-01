@@ -1,5 +1,7 @@
 package cn.com.sky.patterns.creational.singleton;
 
+import cn.com.sky.patterns.creational.singleton.model2.EnumSingleton;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;

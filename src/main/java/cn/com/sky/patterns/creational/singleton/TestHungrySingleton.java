@@ -1,5 +1,7 @@
 package cn.com.sky.patterns.creational.singleton;
 
+import cn.com.sky.patterns.creational.singleton.model.HungrySingleton;
+
 public class TestHungrySingleton {
 
 	public static void main(String[] args) {

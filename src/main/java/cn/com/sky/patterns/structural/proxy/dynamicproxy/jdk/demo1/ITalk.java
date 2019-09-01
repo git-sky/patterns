@@ -5,6 +5,6 @@ package cn.com.sky.patterns.structural.proxy.dynamicproxy.jdk.demo1;
  */
 public interface ITalk {
 
-	public void talk(String msg);
+    void talk(String msg);
 
 }

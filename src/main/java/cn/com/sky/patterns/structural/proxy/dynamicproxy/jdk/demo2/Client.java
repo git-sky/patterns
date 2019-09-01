@@ -5,16 +5,21 @@ import java.lang.reflect.Proxy;
 
 public class Client {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		HelloWorld hw = new HelloWorldImpl();
+        HelloWorld hw = new HelloWorldImpl();
 
-		InvocationHandler handler = new HelloWorldHandler(hw);
+        InvocationHandler handler = new HelloWorldHandler(hw);
 
-		HelloWorld proxy = (HelloWorld) Proxy.newProxyInstance(hw.getClass().getClassLoader(), hw.getClass().getInterfaces(), handler);
+        System.out.println("hw.getClass()=" + hw.getClass());
+        System.out.println("hw.getClass().getClassLoader()=" + hw.getClass().getClassLoader());
+        System.out.println("hw.getClass().getInterfaces()=" + hw.getClass().getInterfaces());
 
-		proxy.sayHelloWorld();
 
-	}
+        HelloWorld proxy = (HelloWorld) Proxy.newProxyInstance(hw.getClass().getClassLoader(), hw.getClass().getInterfaces(), handler);
+
+        proxy.sayHelloWorld();
+
+    }
 
 }

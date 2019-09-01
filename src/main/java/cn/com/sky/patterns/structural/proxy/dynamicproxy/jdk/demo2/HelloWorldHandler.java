@@ -5,30 +5,33 @@ import java.lang.reflect.Method;
 
 public class HelloWorldHandler implements InvocationHandler {
 
-	private Object objOriginal;
+    private Object objOriginal;
 
-	public HelloWorldHandler(Object obj) {
-		this.objOriginal = obj;
-	}
+    public HelloWorldHandler(Object obj) {
+        this.objOriginal = obj;
+    }
 
-	@Override
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		Object result;
-		// 方法调用之前
-		doBefore();
-		// 调用原始对象的方法
-		result = method.invoke(this.objOriginal, args);
-		// 方法调用之后
-		doAfter();
-		return result;
-	}
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-	private void doBefore() {
-		System.out.println("before invoke()...........");
-	}
+//        System.out.println("proxy=" + proxy);
 
-	private void doAfter() {
-		System.out.println("after invoke()...........");
-	}
+        Object result;
+        // 方法调用之前
+        doBefore();
+        // 调用原始对象的方法
+        result = method.invoke(this.objOriginal, args);
+        // 方法调用之后
+        doAfter();
+        return result;
+    }
+
+    private void doBefore() {
+        System.out.println("before invoke()...........");
+    }
+
+    private void doAfter() {
+        System.out.println("after invoke()...........");
+    }
 
 }

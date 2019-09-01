@@ -5,9 +5,9 @@ package cn.com.sky.patterns.structural.proxy;
  */
 public class LazyInit {
 
-	public static void main(String args[]) {
-		IDBQuery q = new DBQueryProxy();
-		System.out.println(q.request());
-	}
+    public static void main(String args[]) {
+        IDBQuery q = new DBQueryProxy();
+        System.out.println(q.request());
+    }
 
 }

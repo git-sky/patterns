@@ -1,6 +1,7 @@
 package cn.com.sky.patterns.structural.decorator.demo3;
 
-public class Manager implements Project { 
+public class Manager implements Project {
+
     private Project project;        //实际上存放的是代码工人对象 
 
     public Manager(Project project) { 

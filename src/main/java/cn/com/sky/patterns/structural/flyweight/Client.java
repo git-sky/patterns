@@ -18,7 +18,7 @@ import java.util.List;
 public class Client {
 
 	// 客户下的订单
-	private static List<Order> orders = new ArrayList<Order>();
+	private static List<Order> orders = new ArrayList<>();
 	// 订单对象生成工厂
 	private static FlavorFactory flavorFactory;
 

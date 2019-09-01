@@ -7,7 +7,7 @@ public class PrototypeManager {
 	/**
 	 * 用来记录原型的编号和原型实例的对应关系
 	 */
-	private static Map<String, Prototype> map = new HashMap<String, Prototype>();
+	private static Map<String, Prototype> map = new HashMap<>();
 
 	/**
 	 * 私有化构造方法，避免外部创建实例

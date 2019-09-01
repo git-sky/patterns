@@ -1,17 +1,24 @@
 package cn.com.sky.patterns.structural.adapter.interfaces;
 
+/**
+ * 缺省适配器模式
+ */
 public abstract class AbstractJob implements Job {
 
-	public void speakChinese() {
-	}
+    @Override
+    public void speakChinese() {
+    }
 
-	public void speakEnglish() {
-	}
+    @Override
+    public void speakEnglish() {
+    }
 
-	public void speakFrench() {
-	}
+    @Override
+    public void speakFrench() {
+    }
 
-	public void speakJapanese() {
-	}
+    @Override
+    public void speakJapanese() {
+    }
 
 }

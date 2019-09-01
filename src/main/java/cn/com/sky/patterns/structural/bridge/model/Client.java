@@ -1,5 +1,10 @@
 package cn.com.sky.patterns.structural.bridge.model;
 
+import cn.com.sky.patterns.structural.bridge.model.abstraction.Abstraction;
+import cn.com.sky.patterns.structural.bridge.model.abstraction.RefinedAbstraction;
+import cn.com.sky.patterns.structural.bridge.model.implement.ConcreteImplementorB;
+import cn.com.sky.patterns.structural.bridge.model.implement.Implementor;
+
 /**
  * <pre>
  * Bridge模式(桥接模式)，桥梁模式【GOF95】是对象的结构模式，又称为柄体(Handle and Body)模式或接口(Interface)模式。

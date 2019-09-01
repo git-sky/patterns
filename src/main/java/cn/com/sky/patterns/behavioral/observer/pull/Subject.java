@@ -14,7 +14,7 @@ public abstract class Subject {
 	/**
 	 * 用来保存注册的观察者对象
 	 */
-	private List<Observer> list = new ArrayList<Observer>();
+	private List<Observer> list = new ArrayList<>();
 
 	/**
 	 * 注册观察者对象

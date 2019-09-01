@@ -5,6 +5,6 @@ package cn.com.sky.patterns.structural.decorator.demo1;
  */
 public interface MessageBoardHandler {
 
-	public String filter(String msg);
+    String filter(String msg);
 
 }

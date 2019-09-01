@@ -29,6 +29,7 @@ public class TalkProxy implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//        System.out.println("proxy=" + proxy);
         Object result = null;
         // 切面之前执行
         System.out.println("切面之前执行");

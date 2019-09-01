@@ -1,15 +1,21 @@
 package cn.com.sky.patterns.creational.prototype.registration;
 
 public class ConcretePrototype1 implements Prototype {
+
     private String name;
-    public Prototype clone(){
+
+    @Override
+    public Prototype clone() {
         ConcretePrototype1 prototype = new ConcretePrototype1();
         prototype.setName(this.name);
         return prototype;
     }
-    public String toString(){
+
+    @Override
+    public String toString() {
         return "Now in Prototype1 , name = " + this.name;
     }
+
     @Override
     public String getName() {
         return name;

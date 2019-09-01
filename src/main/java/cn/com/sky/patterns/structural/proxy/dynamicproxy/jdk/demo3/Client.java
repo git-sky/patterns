@@ -9,10 +9,12 @@ public class Client {
         // 被代理对象
         HelloService helloService = new HelloServiceImpl();
 
-        System.out.println(helloService.getClass().getInterfaces());
-        System.out.println(helloService.getClass());
-        for (Class c : helloService.getClass().getInterfaces()) {
-            System.out.println(c.getName());
+        System.out.println("helloService.getClass().getInterfaces()=" + helloService.getClass().getInterfaces());
+
+        System.out.println("helloService.getClass()=" + helloService.getClass());
+
+        for (Class clazz : helloService.getClass().getInterfaces()) {
+            System.out.println("clazz.getName()=" + clazz.getName());
         }
 
         // 代理对象

@@ -1,10 +1,8 @@
 package cn.com.sky.patterns.creational.singleton;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import cn.com.sky.patterns.creational.singleton.model2.SerialSingleton;
+
+import java.io.*;
 
 /**
  * <pre>
@@ -20,6 +18,7 @@ import java.io.ObjectOutputStream;
 public class TestSerialSingleton {
 
 	public static void main(String args[]) throws IOException, ClassNotFoundException {
+
 
 		SerialSingleton singleton = SerialSingleton.getInstance();
 		System.out.println(singleton);

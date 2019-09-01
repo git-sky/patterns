@@ -1,17 +1,24 @@
 package cn.com.sky.patterns.creational.factoryMethod.factoryMethod.demo1;
 
+import cn.com.sky.patterns.creational.factoryMethod.factoryMethod.demo1.factory.BmwFactory;
+import cn.com.sky.patterns.creational.factoryMethod.factoryMethod.demo1.factory.BuickFactory;
+import cn.com.sky.patterns.creational.factoryMethod.factoryMethod.demo1.factory.CarFactory;
+import cn.com.sky.patterns.creational.factoryMethod.factoryMethod.demo1.product.Car;
+
+/**
+ * 工厂生产汽车
+ */
 public class Client {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		CarFactory factory = new BmwFactory();
-		Car bwm = factory.createCar();
-		bwm.docar();
+        CarFactory bmwFactory = new BmwFactory();
+        Car bwm = bmwFactory.createCar();
+        bwm.docar();
 
-		factory = new BuickFactory();
-		Car buick = factory.createCar();
-		buick.docar();
-
-	}
+        CarFactory buickFactory = new BuickFactory();
+        Car buick = buickFactory.createCar();
+        buick.docar();
+    }
 
 }

@@ -1,7 +1,9 @@
 package cn.com.sky.patterns.structural.flyweight.composite_model;
 
-//抽象享元角色类
+/**
+ * 抽象享元角色类
+ */
 public interface Flyweight {
     //一个示意性方法，参数state是外蕴状态
-    public void operation(String state);
+    void operation(String state);
 }
