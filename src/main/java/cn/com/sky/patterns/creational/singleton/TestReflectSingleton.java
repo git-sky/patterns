@@ -9,35 +9,35 @@ import java.lang.reflect.Constructor;
  */
 public class TestReflectSingleton {
 
-	public static void main(String args[]) {
+    public static void main(String args[]) {
 
-		// ReflectSingleton ref = ReflectSingleton.getInstance();
-		// System.out.println(ref);
-		//
-		// ReflectSingleton ref2 = ReflectSingleton.getInstance();
-		// System.out.println(ref2);
+        // ReflectSingleton ref = ReflectSingleton.getInstance();
+        // System.out.println(ref);
+        //
+        // ReflectSingleton ref2 = ReflectSingleton.getInstance();
+        // System.out.println(ref2);
 
-		try {
+        try {
 
-			Class c = Class.forName(ReflectSingleton.class.getName());
-			Constructor cons = c.getDeclaredConstructor();
-			cons.setAccessible(true);
+            Class c = Class.forName(ReflectSingleton.class.getName());
+            Constructor cons = c.getDeclaredConstructor();
+            cons.setAccessible(true);
 
-			ReflectSingleton single1 = (ReflectSingleton) cons.newInstance();
-			System.out.println(single1);
-			System.out.println("==============================");
+            ReflectSingleton single1 = (ReflectSingleton) cons.newInstance();
+            System.out.println(single1);
+            System.out.println("==============================");
 
-			// Field flag = c.getDeclaredField("flag");
-			// flag.setAccessible(true);
-			// flag.setBoolean(c, false);
+            // Field flag = c.getDeclaredField("flag");
+            // flag.setAccessible(true);
+            // flag.setBoolean(c, false);
 
-			ReflectSingleton single2 = (ReflectSingleton) cons.newInstance();
-			System.out.println(single2);
+            ReflectSingleton single2 = (ReflectSingleton) cons.newInstance();
+            System.out.println(single2);
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-	}
+    }
 
 }

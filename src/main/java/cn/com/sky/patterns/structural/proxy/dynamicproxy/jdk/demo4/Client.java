@@ -13,6 +13,11 @@ public class Client {
 
         proxy.say("zhangsan");
 
+
+        System.out.println("=====================================");
+
+        System.out.println("proxy= " + proxy.toString());
+
     }
 
 }

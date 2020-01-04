@@ -16,9 +16,14 @@ public class Client {
         System.out.println("hw.getClass().getInterfaces()=" + hw.getClass().getInterfaces());
 
 
-        HelloWorld proxy = (HelloWorld) Proxy.newProxyInstance(hw.getClass().getClassLoader(), hw.getClass().getInterfaces(), handler);
+        HelloWorld helloWorldProxy = (HelloWorld) Proxy.newProxyInstance(hw.getClass().getClassLoader(), hw.getClass().getInterfaces(), handler);
 
-        proxy.sayHelloWorld();
+        helloWorldProxy.sayHelloWorld();
+
+
+        System.out.println("=====================================");
+
+        System.out.println("helloWorldProxy= " + helloWorldProxy.toString());
 
     }
 

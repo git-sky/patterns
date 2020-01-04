@@ -13,45 +13,45 @@ import java.lang.reflect.Constructor;
  */
 public class TestEnumSingleton {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		try {
-			Class<EnumSingleton> classType = EnumSingleton.class;
-			Constructor<EnumSingleton> c = (Constructor<EnumSingleton>) classType.getDeclaredConstructor();
-			c.setAccessible(true);
-			c.newInstance();
-		} catch (Exception e1) {
-			e1.printStackTrace();
-		}
+        try {
+            Class<EnumSingleton> classType = EnumSingleton.class;
+            Constructor<EnumSingleton> c = (Constructor<EnumSingleton>) classType.getDeclaredConstructor();
+            c.setAccessible(true);
+            c.newInstance();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
 
-		
-		EnumSingleton singleton = EnumSingleton.INSTANCE;
-		System.out.println(singleton);
 
-		try {
-			FileOutputStream fos = new FileOutputStream("temp.out");
+        EnumSingleton singleton = EnumSingleton.INSTANCE;
+        System.out.println(singleton);
 
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(singleton);
-			oos.flush();
-			oos.close();
+        try {
+            FileOutputStream fos = new FileOutputStream("temp.out");
 
-			FileInputStream fis = new FileInputStream("temp.out");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			EnumSingleton singleton2 = (EnumSingleton) ois.readObject();// 从文件中还原类的对象,不会调用构造函数
-			ois.close();
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(singleton);
+            oos.flush();
+            oos.close();
 
-			System.out.println(singleton2);
+            FileInputStream fis = new FileInputStream("temp.out");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            EnumSingleton singleton2 = (EnumSingleton) ois.readObject();// 从文件中还原类的对象,不会调用构造函数
+            ois.close();
 
-			FileInputStream fis2 = new FileInputStream("temp.out");
-			ObjectInputStream ois2 = new ObjectInputStream(fis2);
-			EnumSingleton singleton3 = (EnumSingleton) ois2.readObject();// 从文件中还原类的对象,不会调用构造函数
-			ois2.close();
-			System.out.println(singleton3);
+            System.out.println(singleton2);
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+            FileInputStream fis2 = new FileInputStream("temp.out");
+            ObjectInputStream ois2 = new ObjectInputStream(fis2);
+            EnumSingleton singleton3 = (EnumSingleton) ois2.readObject();// 从文件中还原类的对象,不会调用构造函数
+            ois2.close();
+            System.out.println(singleton3);
 
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }

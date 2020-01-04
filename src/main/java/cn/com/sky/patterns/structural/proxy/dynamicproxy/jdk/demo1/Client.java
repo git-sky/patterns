@@ -10,5 +10,9 @@ public class Client {
 		// 绑定代理，这种方式会在所有的方法都加上切面方法
 		ITalk iTalk = (ITalk) new TalkProxy().bind(new TalkImpl("tony", "16"));
 		iTalk.talk("talk");
+
+		System.out.println("=====================================");
+
+		System.out.println("iTalk= " + iTalk.toString());
 	}
 }

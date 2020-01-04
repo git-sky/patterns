@@ -37,6 +37,7 @@ public class TalkProxy implements InvocationHandler {
         result = method.invoke(target, args);
         // 切面之后执行
         System.out.println("切面之后执行");
+        System.out.println("result=" + result);
         return result;
     }
 

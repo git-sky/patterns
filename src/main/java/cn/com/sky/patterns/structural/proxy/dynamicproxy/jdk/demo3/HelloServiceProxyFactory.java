@@ -15,10 +15,18 @@ public class HelloServiceProxyFactory {
         InvocationHandler handler = new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object args[]) throws Exception {
-                System.out.println("before calling " + method); // 预处理
-                Object result = method.invoke(helloService, args);
+
+                // 预处理
+                System.out.println("before calling: " + method);
+
                 // 调用被代理的HelloService 实例的方法
-                System.out.println("after calling " + method); // 事后处理
+                Object result = method.invoke(helloService, args);
+
+                // 事后处理
+                System.out.println("after calling: " + method);
+
+                System.out.println("result= " + result);
+
                 return result;
             }
         };

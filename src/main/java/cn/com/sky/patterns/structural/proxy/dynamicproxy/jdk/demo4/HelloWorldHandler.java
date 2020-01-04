@@ -15,10 +15,9 @@ public class HelloWorldHandler implements InvocationHandler {
         System.out.println("methodName:" + method.getName());
         System.out.println("args:" + args);
 
-
         Method m = HelloWorldImpl.class.getClass().getMethod(method.getName(), method.getParameterTypes());
         Object result = m.invoke(HelloWorldImpl.class, args);
-        System.out.println(result);
+        System.out.println("result= " + result);
 
         // 方法调用之后
         doAfter();
