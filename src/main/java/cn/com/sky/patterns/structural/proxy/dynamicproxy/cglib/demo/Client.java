@@ -1,4 +1,4 @@
-package cn.com.sky.patterns.structural.proxy.dynamicproxy.cglib;
+package cn.com.sky.patterns.structural.proxy.dynamicproxy.cglib.demo;
 
 public class Client {
 

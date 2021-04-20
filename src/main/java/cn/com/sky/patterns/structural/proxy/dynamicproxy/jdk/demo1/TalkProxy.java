@@ -29,6 +29,11 @@ public class TalkProxy implements InvocationHandler {
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//        Object proxy：很遗憾，是代理对象本身，而不是目标对象（不要调用，会无限递归）
+//        Method method：本次被调用的代理对象的方法
+//        Obeject[] args：本次被调用的代理对象的方法参数
+//
+
 //        System.out.println("proxy=" + proxy);
         Object result = null;
         // 切面之前执行

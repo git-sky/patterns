@@ -21,7 +21,8 @@ public class EventSource {
         vector.addElement(listener);
     }
 
-    public void notifyEventObject() {// 通知所有的监听器
+    public void notifyEventObject() {
+        // 通知所有的监听器
         Enumeration<MyEventListener> e = vector.elements();
         while (e.hasMoreElements()) {
             MyEventListener listener = e.nextElement();

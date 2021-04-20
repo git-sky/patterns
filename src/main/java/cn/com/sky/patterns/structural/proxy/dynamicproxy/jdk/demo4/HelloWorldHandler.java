@@ -12,12 +12,19 @@ public class HelloWorldHandler implements InvocationHandler {
         doBefore();
         // 调用原始对象的方法
 
-        System.out.println("methodName:" + method.getName());
-        System.out.println("args:" + args);
+        System.out.println("args: " + args);
 
-        Method m = HelloWorldImpl.class.getClass().getMethod(method.getName(), method.getParameterTypes());
-        Object result = m.invoke(HelloWorldImpl.class, args);
+        System.out.println("className: " + method.getDeclaringClass().getName());
+        System.out.println("className2:  " + method.getClass().getName());
+        System.out.println("methodName: " + method.getName());
+        System.out.println("parameterTypes: " + method.getParameterTypes());
+
+        Method m = HelloWorldImpl.class.getMethod(method.getName(), method.getParameterTypes());
+        System.out.println("m: " + m);
+        Object result = m.invoke(new HelloWorldImpl(), args);
+
         System.out.println("result= " + result);
+
 
         // 方法调用之后
         doAfter();

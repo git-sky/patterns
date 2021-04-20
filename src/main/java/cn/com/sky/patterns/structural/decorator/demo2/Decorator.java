@@ -1,5 +1,8 @@
 package cn.com.sky.patterns.structural.decorator.demo2;
 
+/**
+ * 装饰器
+ */
 public class Decorator implements Sourceable {
 
 	private Sourceable sourceable;

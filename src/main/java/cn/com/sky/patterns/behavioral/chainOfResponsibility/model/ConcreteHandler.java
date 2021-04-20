@@ -10,7 +10,7 @@ public class ConcreteHandler extends Handler {
 
 	@Override
 	public void handleRequest() {
-		System.out.println(name + "deal!");
+		System.out.println(name + " deal!");
 		if (getHandler() != null) {
 			getHandler().handleRequest();
 		}

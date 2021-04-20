@@ -34,7 +34,7 @@ public class Selector {
             }
         }
         //TODO 例子中只是简单的将event列表全部返回，可以在此处增加业务逻辑，选出符合条件的event进行返回
-        List<Event> events = new ArrayList<Event>();
+        List<Event> events = new ArrayList<>();
         eventQueue.drainTo(events);
         return events;
     }

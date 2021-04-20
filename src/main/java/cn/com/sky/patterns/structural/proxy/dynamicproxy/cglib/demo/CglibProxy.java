@@ -1,4 +1,4 @@
-package cn.com.sky.patterns.structural.proxy.dynamicproxy.cglib;
+package cn.com.sky.patterns.structural.proxy.dynamicproxy.cglib.demo;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -14,6 +14,9 @@ import java.lang.reflect.Method;
  * CGLIB是针对类来实现代理的，他的原理是对指定的目标类生成一个子类，并覆盖其中方法实现增强。
  * 采用的是继承的方式。
  * 所以不能代理final类和final方法。
+ *
+ *
+ * Cglib 动态代理的实现需要依赖两个核心组件：MethodInterceptor 接口和 Enhancer 类。
  *
  * </pre>
  */
@@ -44,10 +47,10 @@ public class CglibProxy implements MethodInterceptor {
     }
 
     @Override
-    public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         Object result = null;
         System.out.println("事物开始");
-        result = methodProxy.invokeSuper(proxy, args);
+        result = methodProxy.invokeSuper(object, args);
         System.out.println("事物结束");
         return result;
     }
